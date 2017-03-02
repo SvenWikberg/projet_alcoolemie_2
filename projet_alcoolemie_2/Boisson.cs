@@ -57,7 +57,7 @@ namespace projet_alcoolemie_2 {
         public double AlcoolBrute {
             get {
                 //0.8 est car 1L d'alcool pur pèse 0.8kg
-                return ((Degre * Quantite) / 100) * 0.8;
+                return ((Degre * Quantite) / 1000) * 0.8;
             }
         }
 

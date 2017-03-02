@@ -42,6 +42,11 @@ namespace projet_alcoolemie_2 {
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="b"></param>
+        /// <param name="dtBoissonConsommee">instant on l'utilisateur a bu la boisson, au quart d'heure près, sans les secondes</param>
         public BoissonConsommee(Boisson b, DateTime dtBoissonConsommee) {
             B = b;
             DtBoissonConsommee = dtBoissonConsommee;
