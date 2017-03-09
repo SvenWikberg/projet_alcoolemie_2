@@ -8,3 +8,11 @@ C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\obj
 C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\obj\Debug\projet_alcoolemie_2.exe
 C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\obj\Debug\projet_alcoolemie_2.pdb
 C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\obj\Debug\projet_alcoolemie_2.GraphView.resources
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\EntityFramework.dll
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\System.Data.SQLite.dll
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\EntityFramework.xml
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_2\projet_alcoolemie_2\bin\Debug\System.Data.SQLite.xml

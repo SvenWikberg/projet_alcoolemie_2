@@ -104,13 +104,7 @@ namespace projet_alcoolemie_2 {
 
         public ModelPA(MainView maMainView) {
             MaMainView = maMainView;
-            Boissons = new List<Boisson>();
-            Boissons.Add(new Boisson("Bière", 250, 5));
-            Boissons.Add(new Boisson("Bière légère", 250, 4));
-            Boissons.Add(new Boisson("Bière", 500, 5));
-            Boissons.Add(new Boisson("Bière légère", 500, 4));
-            Boissons.Add(new Boisson("Verre de vin", 140, 11));
-            Boissons.Add(new Boisson("Shot", 45, 40));
+            Boissons = DaoIPA.GetAllBoissons();
 
             BoissonsConsommees = new List<BoissonConsommee>();
             TauxDAlcolemie = 0;
@@ -122,11 +116,11 @@ namespace projet_alcoolemie_2 {
 
             Poids = 60;
             EstHomme = true;
-            BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 1, 21, 0, 0)));
-            BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 1, 22, 0, 0)));
-            BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 1, 22, 0, 0)));
-            BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 2, 13, 0, 0)));
-            BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 2, 15, 0, 0)));
+            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[1], new DateTime(2017, 3, 8, 21, 0, 0)));
+            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 8, 22, 0, 0)));
+            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 8, 22, 0, 0)));
+            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 9, 13, 0, 0)));
+            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 9, 15, 0, 0)));
 
             //////////////////////FIN TEST
         }

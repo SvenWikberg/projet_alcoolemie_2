@@ -26,6 +26,11 @@ namespace projet_alcoolemie_2 {
             }
 
             set {
+                if (value.Minute % 15 != 0) {
+                    value = value.AddMinutes(-(value.Minute % 15));
+                }
+                value = value.AddSeconds(-(value.Second % 60));
+
                 _dtBoissonConsommee = value;
             }
         }
@@ -39,6 +44,13 @@ namespace projet_alcoolemie_2 {
 
             set {
                 _dtFinEffetBoisson = value;
+            }
+        }
+
+        // tostring
+        public new string ToString {
+            get {
+                return String.Format("{0}, {1}", B.ToString, DtBoissonConsommee);
             }
         }
 

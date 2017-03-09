@@ -73,6 +73,13 @@ namespace projet_alcoolemie_2 {
             }
         }
 
+        // tostring
+        public new string ToString {
+            get {
+                return String.Format("{0} - {1}ml", Nom, Quantite);
+            }
+        }
+
 
         public Boisson(string nom, double quantite, double degre) {
             Nom = nom;
