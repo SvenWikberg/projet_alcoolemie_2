@@ -23,24 +23,30 @@
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGraph = new System.Windows.Forms.Button();
             this.cbxBoissons = new System.Windows.Forms.ComboBox();
             this.timPkrBoissons = new System.Windows.Forms.DateTimePicker();
             this.nudNbBoissons = new System.Windows.Forms.NumericUpDown();
             this.btnAjouterBoisson = new System.Windows.Forms.Button();
             this.lbxConso = new System.Windows.Forms.ListBox();
+            this.lblSexe = new System.Windows.Forms.Label();
+            this.lblPoids = new System.Windows.Forms.Label();
+            this.cbxSexe = new System.Windows.Forms.ComboBox();
+            this.nudPoids = new System.Windows.Forms.NumericUpDown();
+            this.lblKg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudNbBoissons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPoids)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnGraph
             // 
-            this.button1.Location = new System.Drawing.Point(0, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGraph.Location = new System.Drawing.Point(0, 436);
+            this.btnGraph.Name = "btnGraph";
+            this.btnGraph.Size = new System.Drawing.Size(302, 37);
+            this.btnGraph.TabIndex = 0;
+            this.btnGraph.Text = "Voir le graphique";
+            this.btnGraph.UseVisualStyleBackColor = true;
+            this.btnGraph.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbxBoissons
             // 
@@ -53,7 +59,7 @@
             // 
             // timPkrBoissons
             // 
-            this.timPkrBoissons.Location = new System.Drawing.Point(128, 49);
+            this.timPkrBoissons.Location = new System.Drawing.Point(128, 52);
             this.timPkrBoissons.Name = "timPkrBoissons";
             this.timPkrBoissons.ShowUpDown = true;
             this.timPkrBoissons.Size = new System.Drawing.Size(49, 20);
@@ -61,7 +67,7 @@
             // 
             // nudNbBoissons
             // 
-            this.nudNbBoissons.Location = new System.Drawing.Point(183, 50);
+            this.nudNbBoissons.Location = new System.Drawing.Point(183, 52);
             this.nudNbBoissons.Name = "nudNbBoissons";
             this.nudNbBoissons.Size = new System.Drawing.Size(38, 20);
             this.nudNbBoissons.TabIndex = 3;
@@ -84,38 +90,108 @@
             // lbxConso
             // 
             this.lbxConso.FormattingEnabled = true;
-            this.lbxConso.Location = new System.Drawing.Point(779, 56);
+            this.lbxConso.Location = new System.Drawing.Point(1, 79);
             this.lbxConso.Name = "lbxConso";
-            this.lbxConso.Size = new System.Drawing.Size(193, 355);
+            this.lbxConso.Size = new System.Drawing.Size(301, 355);
             this.lbxConso.TabIndex = 5;
+            this.lbxConso.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbxConso_MouseDoubleClick);
+            // 
+            // lblSexe
+            // 
+            this.lblSexe.AutoSize = true;
+            this.lblSexe.Location = new System.Drawing.Point(1, 13);
+            this.lblSexe.Name = "lblSexe";
+            this.lblSexe.Size = new System.Drawing.Size(37, 13);
+            this.lblSexe.TabIndex = 6;
+            this.lblSexe.Text = "Sexe :";
+            // 
+            // lblPoids
+            // 
+            this.lblPoids.AutoSize = true;
+            this.lblPoids.Location = new System.Drawing.Point(141, 13);
+            this.lblPoids.Name = "lblPoids";
+            this.lblPoids.Size = new System.Drawing.Size(39, 13);
+            this.lblPoids.TabIndex = 7;
+            this.lblPoids.Text = "Poids :";
+            // 
+            // cbxSexe
+            // 
+            this.cbxSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSexe.FormattingEnabled = true;
+            this.cbxSexe.Items.AddRange(new object[] {
+            "Homme",
+            "Femme"});
+            this.cbxSexe.Location = new System.Drawing.Point(45, 13);
+            this.cbxSexe.Name = "cbxSexe";
+            this.cbxSexe.Size = new System.Drawing.Size(90, 21);
+            this.cbxSexe.TabIndex = 8;
+            // 
+            // nudPoids
+            // 
+            this.nudPoids.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudPoids.Location = new System.Drawing.Point(183, 12);
+            this.nudPoids.Name = "nudPoids";
+            this.nudPoids.Size = new System.Drawing.Size(51, 20);
+            this.nudPoids.TabIndex = 9;
+            this.nudPoids.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // lblKg
+            // 
+            this.lblKg.AutoSize = true;
+            this.lblKg.Location = new System.Drawing.Point(234, 16);
+            this.lblKg.Name = "lblKg";
+            this.lblKg.Size = new System.Drawing.Size(19, 13);
+            this.lblKg.TabIndex = 10;
+            this.lblKg.Text = "kg";
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 462);
+            this.ClientSize = new System.Drawing.Size(304, 485);
+            this.Controls.Add(this.lblKg);
+            this.Controls.Add(this.nudPoids);
+            this.Controls.Add(this.cbxSexe);
+            this.Controls.Add(this.lblPoids);
+            this.Controls.Add(this.lblSexe);
             this.Controls.Add(this.lbxConso);
             this.Controls.Add(this.btnAjouterBoisson);
             this.Controls.Add(this.nudNbBoissons);
             this.Controls.Add(this.timPkrBoissons);
             this.Controls.Add(this.cbxBoissons);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGraph);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainView";
-            this.Text = "Form1";
+            this.Text = "Calcul alcoolémie";
             this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudNbBoissons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPoids)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGraph;
         private System.Windows.Forms.ComboBox cbxBoissons;
         private System.Windows.Forms.DateTimePicker timPkrBoissons;
         private System.Windows.Forms.NumericUpDown nudNbBoissons;
         private System.Windows.Forms.Button btnAjouterBoisson;
         private System.Windows.Forms.ListBox lbxConso;
+        private System.Windows.Forms.Label lblSexe;
+        private System.Windows.Forms.Label lblPoids;
+        private System.Windows.Forms.ComboBox cbxSexe;
+        private System.Windows.Forms.NumericUpDown nudPoids;
+        private System.Windows.Forms.Label lblKg;
     }
 }
 

@@ -30,10 +30,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 462);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(1500, 500);
             this.MinimumSize = new System.Drawing.Size(1500, 500);
             this.Name = "GraphView";
-            this.Text = "Form2";
+            this.Text = "Graphique alcoolémie";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GraphView_Paint);
             this.ResumeLayout(false);
 

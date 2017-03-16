@@ -110,19 +110,6 @@ namespace projet_alcoolemie_2 {
             TauxDAlcolemie = 0;
             TempsDElimination = 0;
             MaGraphView = new GraphView(this);
-
-
-            //////////////////////TEST
-
-            Poids = 60;
-            EstHomme = true;
-            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[1], new DateTime(2017, 3, 8, 21, 0, 0)));
-            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 8, 22, 0, 0)));
-            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[2], new DateTime(2017, 3, 8, 22, 0, 0)));
-            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 9, 13, 0, 0)));
-            //BoissonsConsommees.Add(new BoissonConsommee(Boissons[5], new DateTime(2017, 3, 9, 15, 0, 0)));
-
-            //////////////////////FIN TEST
         }
 
         public void ShowGraphView() {

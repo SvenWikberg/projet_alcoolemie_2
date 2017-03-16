@@ -30,6 +30,8 @@ namespace projet_alcoolemie_2 {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            MyModelIPA.Poids = (int)nudPoids.Value;
+            MyModelIPA.EstHomme = (cbxSexe.SelectedIndex == 0 ? true : false);
             MyModelIPA.ShowGraphView();
         }
 
@@ -37,6 +39,7 @@ namespace projet_alcoolemie_2 {
             cbxBoissons.DataSource = MyModelIPA.Boissons;
             cbxBoissons.DisplayMember = "ToString";
             cbxBoissons.SelectedIndex = 0;
+            cbxSexe.SelectedIndex = 0;
             timPkrBoissons.Format = DateTimePickerFormat.Custom;
             timPkrBoissons.CustomFormat = "HH:mm";
             UpdateView();
@@ -49,14 +52,17 @@ namespace projet_alcoolemie_2 {
             UpdateView();
         }
 
-        public void UpdateView() {// A REPARER
-            lbxConso.DataSource = MyModelIPA.BoissonsConsommees;
+        public void UpdateView() {
+            lbxConso.DataSource = MyModelIPA.BoissonsConsommees.OrderBy(o => o.DtBoissonConsommee).ToArray();
             lbxConso.DisplayMember = "ToString";
+        }
 
-            //lbxConso.Items.Clear();
-            //foreach (BoissonConsommee bc in MyModelIPA.BoissonsConsommees) {
-            //    lbxConso.Items.Add(bc.ToString);
-            //}
+        private void lbxConso_MouseDoubleClick(object sender, MouseEventArgs e) {
+            if (lbxConso.Items.Count > 0) {
+                BoissonConsommee bc = (BoissonConsommee)lbxConso.SelectedItem;
+                MyModelIPA.BoissonsConsommees.Remove(bc);
+                UpdateView();
+            }
         }
     }
 }

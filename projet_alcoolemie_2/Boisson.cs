@@ -61,18 +61,6 @@ namespace projet_alcoolemie_2 {
             }
         }
 
-        // temps, en seconde, pour que l'utilisateur redeviennent sobre apres avoir bu cette boisson
-        private int _tempsDElimination;
-        public int TempsDElimination {
-            get {
-                return _tempsDElimination;
-            }
-
-            set {
-                _tempsDElimination = value;
-            }
-        }
-
         // tostring
         public new string ToString {
             get {
@@ -85,7 +73,6 @@ namespace projet_alcoolemie_2 {
             Nom = nom;
             Quantite = quantite;
             Degre = degre;
-            TempsDElimination = 0;
         }
 
         public void CalculTempsDElimination(int poids, bool estHomme) {

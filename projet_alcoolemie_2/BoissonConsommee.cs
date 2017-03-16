@@ -35,18 +35,6 @@ namespace projet_alcoolemie_2 {
             }
         }
 
-        //instant ou l'alcool de la boisson n'a plus d'effet sur l'utilisateur
-        private DateTime _dtFinEffetBoisson;
-        public DateTime DtFinEffetBoisson {
-            get {
-                return _dtFinEffetBoisson;
-            }
-
-            set {
-                _dtFinEffetBoisson = value;
-            }
-        }
-
         // tostring
         public new string ToString {
             get {
@@ -62,8 +50,6 @@ namespace projet_alcoolemie_2 {
         public BoissonConsommee(Boisson b, DateTime dtBoissonConsommee) {
             B = b;
             DtBoissonConsommee = dtBoissonConsommee;
-            DtFinEffetBoisson = DtBoissonConsommee;
-            DtFinEffetBoisson.AddSeconds(b.TempsDElimination);
         }
     }
 }
