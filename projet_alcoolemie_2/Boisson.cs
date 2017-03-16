@@ -30,12 +30,8 @@ namespace projet_alcoolemie_2 {
             }
         }
 
-        // Degré d'alcool dans la boisson
-        private double _degre;
-        /// <summary>
-        /// Retourne une valeur en 0 et 100
-        /// </summary>
-        public double Degre {
+        /// <summary> Degré d'alcool dans la boisson (valide entre 0 et 100)</summary>
+        public double   Degre {
             get {
                 return _degre;
             }
@@ -52,6 +48,7 @@ namespace projet_alcoolemie_2 {
                 _degre = value;
             }
         }
+        private double _degre;
 
         // Quantité d'alcool dans la boisson, en gramme
         public double AlcoolBrute {
@@ -62,23 +59,20 @@ namespace projet_alcoolemie_2 {
         }
 
         // tostring
-        public new string ToString {
-            get {
-                return String.Format("{0} - {1}ml", Nom, Quantite);
-            }
+        public override string ToString() {
+            return String.Format("{0} - {1}ml", Nom, Quantite);
         }
+        //public new string ToString {
+        //    get {
+        //        return String.Format("{0} - {1}ml", Nom, Quantite);
+        //    }
+        //}
 
 
         public Boisson(string nom, double quantite, double degre) {
             Nom = nom;
             Quantite = quantite;
             Degre = degre;
-        }
-
-        public void CalculTempsDElimination(int poids, bool estHomme) {
-            double tauxDAlcoolemieTemp = 0;
-
-            tauxDAlcoolemieTemp = AlcoolBrute / (poids * (estHomme ? 0.7 : 0.6));
         }
     }
 }

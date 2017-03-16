@@ -38,7 +38,7 @@ namespace projet_alcoolemie_2 {
         // tostring
         public new string ToString {
             get {
-                return String.Format("{0}, {1}", B.ToString, DtBoissonConsommee);
+                return String.Format("{0}, {1}", B.ToString(), DtBoissonConsommee);
             }
         }
 

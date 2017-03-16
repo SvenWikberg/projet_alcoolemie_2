@@ -27,6 +27,8 @@ namespace projet_alcoolemie_2 {
             InitializeComponent();
 
             MyModelIPA = new ModelPA(this);
+
+
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -37,7 +39,7 @@ namespace projet_alcoolemie_2 {
 
         private void MainView_Load(object sender, EventArgs e) {
             cbxBoissons.DataSource = MyModelIPA.Boissons;
-            cbxBoissons.DisplayMember = "ToString";
+            //cbxBoissons.DisplayMember = "ToString";
             cbxBoissons.SelectedIndex = 0;
             cbxSexe.SelectedIndex = 0;
             timPkrBoissons.Format = DateTimePickerFormat.Custom;
